@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="friendCell" rowHeight="50" id="KGk-i7-Jjw" customClass="WTFriendListViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oeE-1b-bI9">
+                        <rect key="frame" x="10" y="10" width="28" height="29"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="oeE-1b-bI9" secondAttribute="height" multiplier="48:49" id="nhw-he-4oF"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NlX-f7-GfC">
+                        <rect key="frame" x="48" y="14" width="214" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qM5-5b-qLd">
+                        <rect key="frame" x="270" y="14" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="oeE-1b-bI9" secondAttribute="bottom" constant="2" id="4g3-Qt-JDF"/>
+                    <constraint firstItem="NlX-f7-GfC" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="DHc-4U-bCr"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="NlX-f7-GfC" secondAttribute="trailing" constant="50" id="I3t-wq-Lhg"/>
+                    <constraint firstItem="oeE-1b-bI9" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="2" id="IM3-IL-cpL"/>
+                    <constraint firstItem="qM5-5b-qLd" firstAttribute="leading" secondItem="NlX-f7-GfC" secondAttribute="trailing" constant="2" id="Ks7-dr-RaM"/>
+                    <constraint firstItem="qM5-5b-qLd" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="2" id="Mtr-9F-QOq"/>
+                    <constraint firstItem="NlX-f7-GfC" firstAttribute="leading" secondItem="oeE-1b-bI9" secondAttribute="trailing" constant="10" id="OHp-VX-U78"/>
+                    <constraint firstItem="oeE-1b-bI9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="-3" id="h88-gE-79y"/>
+                    <constraint firstItem="oeE-1b-bI9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="m6C-Mf-SQ5"/>
+                    <constraint firstAttribute="bottom" secondItem="oeE-1b-bI9" secondAttribute="bottom" constant="6" id="pha-GR-agZ"/>
+                    <constraint firstItem="qM5-5b-qLd" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="wH2-3d-0Qq"/>
+                    <constraint firstItem="oeE-1b-bI9" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="xeI-9c-EIZ"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="h88-gE-79y"/>
+                        <exclude reference="pha-GR-agZ"/>
+                        <exclude reference="xeI-9c-EIZ"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="icon" destination="oeE-1b-bI9" id="z1l-iI-dIL"/>
+                <outlet property="nickName" destination="NlX-f7-GfC" id="Jw0-b5-W4N"/>
+                <outlet property="unread" destination="qM5-5b-qLd" id="HgU-11-YrV"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>
