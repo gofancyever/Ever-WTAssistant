@@ -294,7 +294,7 @@
 		180960061C8D5E550072B08A /* WTAssistantUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WTAssistantUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1809600A1C8D5E550072B08A /* WTAssistantUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTAssistantUITests.m; sourceTree = "<group>"; };
 		1809600C1C8D5E550072B08A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		180960341C8D606F0072B08A /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		180960341C8D606F0072B08A /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrefixHeader.pch; path = Classes/Other/PrefixHeader.pch; sourceTree = "<group>"; };
 		1809603F1C8D615D0072B08A /* WTTabBarControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTTabBarControllerViewController.h; sourceTree = "<group>"; };
 		180960401C8D615D0072B08A /* WTTabBarControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTTabBarControllerViewController.m; sourceTree = "<group>"; };
 		180960421C8D61B10072B08A /* WTNavControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTNavControllerViewController.h; sourceTree = "<group>"; };
@@ -849,6 +849,7 @@
 			children = (
 				180960181C8D5F0D0072B08A /* Classes */,
 				18095FF11C8D5E550072B08A /* Assets.xcassets */,
+				180960341C8D606F0072B08A /* PrefixHeader.pch */,
 				18095FF31C8D5E550072B08A /* LaunchScreen.storyboard */,
 				18D02B631CA549F100B9286F /* 1.plist */,
 				18D02B5F1CA549C800B9286F /* news.plist */,
@@ -1053,11 +1054,10 @@
 			children = (
 				1879CDB11C8D898400479B81 /* AppDelegate.m */,
 				1879CDB01C8D898400479B81 /* AppDelegate.h */,
+				18E2061D1CB10F3400496C08 /* public.h */,
 				1879CE291C9064DE00479B81 /* Category */,
 				1879CDA61C8D883700479B81 /* Tool */,
 				1809603E1C8D60F70072B08A /* Lib */,
-				180960341C8D606F0072B08A /* PrefixHeader.pch */,
-				18E2061D1CB10F3400496C08 /* public.h */,
 			);
 			path = Other;
 			sourceTree = "<group>";
