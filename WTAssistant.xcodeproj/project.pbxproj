@@ -261,6 +261,7 @@
 		18EA3F2E1CA400BF00913F68 /* news.plist in Resources */ = {isa = PBXBuildFile; fileRef = 18EA3F2D1CA400BF00913F68 /* news.plist */; };
 		18EA3F301CA40F1700913F68 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 18EA3F2F1CA40F1700913F68 /* libsqlite3.0.tbd */; };
 		18EA3F391CA4E50000913F68 /* WTWebNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EA3F381CA4E50000913F68 /* WTWebNewsViewController.m */; };
+		4ADA5F6608DCCE5A5D9776F9 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CC18A3E7C2B63F94B4810C2D /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -790,6 +791,9 @@
 		18EA3F2F1CA40F1700913F68 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		18EA3F371CA4E50000913F68 /* WTWebNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTWebNewsViewController.h; sourceTree = "<group>"; };
 		18EA3F381CA4E50000913F68 /* WTWebNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTWebNewsViewController.m; sourceTree = "<group>"; };
+		AA8E92B40A2B2DEE25180AD6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		CC18A3E7C2B63F94B4810C2D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		E55EBEF2F759E87DC8EA5DA0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -801,6 +805,7 @@
 				18E2046E1CB0FA7500496C08 /* libidn.a in Frameworks */,
 				18E204671CB0F9EA00496C08 /* libxml2.tbd in Frameworks */,
 				18EA3F301CA40F1700913F68 /* libsqlite3.0.tbd in Frameworks */,
+				4ADA5F6608DCCE5A5D9776F9 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -831,6 +836,8 @@
 				18095FFE1C8D5E550072B08A /* WTAssistantTests */,
 				180960091C8D5E550072B08A /* WTAssistantUITests */,
 				18095FE31C8D5E550072B08A /* Products */,
+				BCFC306A17F7485E55BA3E9E /* Pods */,
+				BC190A338F0E7E2A26418087 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -2298,6 +2305,23 @@
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
+		BC190A338F0E7E2A26418087 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CC18A3E7C2B63F94B4810C2D /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BCFC306A17F7485E55BA3E9E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E55EBEF2F759E87DC8EA5DA0 /* Pods.debug.xcconfig */,
+				AA8E92B40A2B2DEE25180AD6 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -2305,9 +2329,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1809600F1C8D5E550072B08A /* Build configuration list for PBXNativeTarget "WTAssistant" */;
 			buildPhases = (
+				21D913E2B598F91CF396B2E2 /* Check Pods Manifest.lock */,
 				18095FDE1C8D5E550072B08A /* Sources */,
 				18095FDF1C8D5E550072B08A /* Frameworks */,
 				18095FE01C8D5E550072B08A /* Resources */,
+				93EF5566995516539E45BD98 /* Embed Pods Frameworks */,
+				40548D40C04754A9BD3E62BF /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2439,6 +2466,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		21D913E2B598F91CF396B2E2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		40548D40C04754A9BD3E62BF /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		93EF5566995516539E45BD98 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		18095FDE1C8D5E550072B08A /* Sources */ = {
@@ -2802,6 +2877,7 @@
 		};
 		180960101C8D5E550072B08A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E55EBEF2F759E87DC8EA5DA0 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_NO_COMMON_BLOCKS = NO;
@@ -2814,7 +2890,7 @@
 					"$(PROJECT_DIR)/WTAssistant/Classes/Other/Lib/XMPP/Vendor/libidn",
 					"$(PROJECT_DIR)/WTAssistant/Classes/Message/Tool/UUChat/VoiceLib",
 				);
-				OTHER_LDFLAGS = "-lxml2";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = Gaooof.WTAssistant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -2822,6 +2898,7 @@
 		};
 		180960111C8D5E550072B08A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA8E92B40A2B2DEE25180AD6 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_NO_COMMON_BLOCKS = NO;
@@ -2834,7 +2911,7 @@
 					"$(PROJECT_DIR)/WTAssistant/Classes/Other/Lib/XMPP/Vendor/libidn",
 					"$(PROJECT_DIR)/WTAssistant/Classes/Message/Tool/UUChat/VoiceLib",
 				);
-				OTHER_LDFLAGS = "-lxml2";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = Gaooof.WTAssistant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

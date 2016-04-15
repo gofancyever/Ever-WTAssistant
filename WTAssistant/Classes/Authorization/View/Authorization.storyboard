@@ -38,6 +38,7 @@
                                 <subviews>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入用户名" textAlignment="natural" minimumFontSize="17" background="operationbox_text" translatesAutoresizingMaskIntoConstraints="NO" id="C3U-Fs-eIi">
                                         <rect key="frame" x="8" y="10" width="234" height="30"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="oTo-PN-8mR"/>
                                         </constraints>
@@ -54,10 +55,11 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJK-fl-gWN">
                                         <rect key="frame" x="8" y="90" width="112" height="30"/>
+                                        <color key="backgroundColor" red="0.1063435821" green="0.78991358239999998" blue="0.21852738599999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="3Wu-Yp-oQC"/>
                                         </constraints>
-                                        <state key="normal" title="登陆" backgroundImage="fts_green_btn">
+                                        <state key="normal" title="登陆">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
