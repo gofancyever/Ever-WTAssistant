@@ -13,6 +13,8 @@
 @interface WTLoginController ()
 @property (weak, nonatomic) IBOutlet UITextField *userTextField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordTextField;
+@property (weak, nonatomic) IBOutlet UIButton *btnLoginType;
+@property (weak, nonatomic) IBOutlet UIImageView *iconView;
 
 @end
 
@@ -23,7 +25,8 @@
     //设置光标
     [self.userTextField setTextFieldLeftView];
     [self.passwordTextField setTextFieldLeftView];
-}
+    
+    }
 /**
  *  用户登陆
  */
@@ -42,6 +45,8 @@
     
     
 }
+
+
 //游客登录
 - (IBAction)btnVistorClick:(id)sender {
     //跳转控制器
